@@ -30,7 +30,7 @@ const Login = () => {
 
 
     return (
-      <div className="max-w-6xl px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold mt-7 text-center my-7">
           Login your account
         </h2>
