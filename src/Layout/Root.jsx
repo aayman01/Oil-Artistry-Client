@@ -4,11 +4,13 @@ import NavBar from '../Pages/Home/NavBar';
 
 const Root = () => {
     return (
-        <div>
-            <NavBar/>
-            <Outlet/>
-            <Footer/>
+      <div>
+        <div className="max-w-6xl mx-auto px-4">
+          <NavBar />
         </div>
+        <Outlet />
+        <Footer />
+      </div>
     );
 };
 

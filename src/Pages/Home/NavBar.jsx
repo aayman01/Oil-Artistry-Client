@@ -84,7 +84,7 @@ const NavBar = () => {
               </ul>
             </div>
             <div className="flex items-center justify-center">
-              <Link to ="/">
+              <Link to="/">
                 <img className="w-24 h-24 rounded-full" src={logo} alt="" />
               </Link>
             </div>
@@ -121,8 +121,12 @@ const NavBar = () => {
                 </button>
               </Link>
             )} */}
-            <button className="btn">Log IN</button>
-            <button className="btn">Register</button>
+            <Link to="/login">
+              <button className="btn">Log IN</button>
+            </Link>
+            <Link to='/register'>
+              <button className="btn">Register</button>
+            </Link>
           </div>
         </div>
       </div>
