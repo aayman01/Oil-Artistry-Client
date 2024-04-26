@@ -32,7 +32,7 @@ const NavBar = () => {
                  ? "text-lg font-medium border-2 hover:bg-[#B81D33] text-[#B81D33] hover:text-white border-[#B81D33]"
                  : "text-black md:text-[#B81D33] text-base font-medium"
              }
-             to="/updateprofile"
+             to="/alliteams"
            >
              All Art & craft Items
            </NavLink>
@@ -56,7 +56,7 @@ const NavBar = () => {
                  ? "text-lg font-medium border-2 hover:bg-[#B81D33] text-[#B81D33] hover:text-white border-[#B81D33]"
                  : "text-black md:text-[#B81D33] text-base font-medium"
              }
-             to="/addproperty"
+             to="/mycraftlist"
            >
              My Art&Craft List
            </NavLink>
