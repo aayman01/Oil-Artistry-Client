@@ -1,4 +1,7 @@
-import logo from "../../assets/footerlogo.png"
+import logo from "../../assets/footerlogo.png";
+import { FaMessage, FaPhone } from "react-icons/fa6";
+import { CiLocationOn } from "react-icons/ci";
+
 
 const Footer = () => {
     return (
@@ -6,12 +9,21 @@ const Footer = () => {
         <footer className="footer p-10 text-white">
           <aside>
             <img className="w-28 h-28" src={logo} alt="" />
-            <p>
-              Email: OilArtistry@gmail.com
-              <br />
-              Phone no: 017123456789
-            </p>
           </aside>
+          <nav>
+            <h6 className="footer-title">Contact Info</h6>
+            <p className="flex items-center justify-center gap-1">
+              <CiLocationOn /> 5678 Quantum Boulevard
+            </p>
+            <p className="flex items-center justify-center gap-1">
+              <FaMessage />
+              OilArtistry@gmail.com
+            </p>
+            <p className="flex items-center justify-center gap-1">
+              <FaPhone />
+              +880 101 000 000
+            </p>
+          </nav>
           <nav>
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Design</a>
