@@ -1,7 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/navlogo.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { CgProfile } from "react-icons/cg";
 
 const NavBar = () => {
+
+  const { user , logOut } = useContext(AuthContext)
+
+  
      const navLinks = (
        <>
          <li>
@@ -94,7 +101,7 @@ const NavBar = () => {
           </div>
 
           <div className="navbar-end">
-            {/* {user ? (
+            {user ? (
               <div className="flex flex-row gap-2 items-center">
                 <div tabIndex={0} className="avatar mr-3">
                   <button
@@ -109,24 +116,25 @@ const NavBar = () => {
                 </div>
                 <button
                   onClick={logOut}
-                  className="btn border-0 bg-[#00C194] text-white font-semibold"
+                  className="btn border-0 bg-[#B81D33] hover:text-[#B81D33] text-white font-semibold"
                 >
                   Log out
                 </button>
               </div>
             ) : (
-              <Link to="/login">
-                <button className="btn border-0 bg-[#00C194] text-white font-semibold">
-                  Login
-                </button>
-              </Link>
-            )} */}
-            <Link to="/login">
-              <button className="btn">Log IN</button>
-            </Link>
-            <Link to='/register'>
-              <button className="btn">Register</button>
-            </Link>
+              <div>
+                <Link to="/login">
+                  <button className="btn mr-2 border-0 bg-[#B81D33] hover:text-[#B81D33] text-white font-semibold">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/register">
+                  <button className="btn border-0 bg-[#B81D33] hover:text-[#B81D33] text-white font-semibold">
+                    Register
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
