@@ -2,7 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/navlogo.png"
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { CgProfile } from "react-icons/cg";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const NavBar = () => {
 
@@ -104,15 +105,14 @@ const NavBar = () => {
             {user ? (
               <div className="flex flex-row gap-2 items-center">
                 <div tabIndex={0} className="avatar mr-3">
-                  <button
-                    className="w-10 rounded-full tooltip tooltip-bottom"
-                    data-tip={user?.displayName}
+                  <a
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content={user?.displayName}
                   >
-                    <img
-                      className="rounded-full"
-                      src={user?.photoURL || <CgProfile />}
-                    />
-                  </button>
+                    <button className="w-12 rounded-full">
+                      <img className="rounded-full" src={user?.photoURL} />
+                    </button>
+                  </a>
                 </div>
                 <button
                   onClick={logOut}
@@ -137,6 +137,7 @@ const NavBar = () => {
             )}
           </div>
         </div>
+        <Tooltip id="my-tooltip" />
       </div>
     );
 };
