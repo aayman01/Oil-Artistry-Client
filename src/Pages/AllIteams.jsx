@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllIteams = () => {
   const loadedData = useLoaderData();
-  // console.log(loadedData.length)
+  console.log(loadedData)
     return (
       <div className="max-w-6xl mx-auto px-4">
         <div className="mt-10 mb-10">
@@ -14,7 +14,7 @@ const AllIteams = () => {
           <table className="table">
             {/* head */}
             <thead>
-              <tr>
+              <tr className="text-lg font-normal">
                 <th></th>
                 <th>Item name</th>
                 <th>Subcategory</th>
@@ -23,14 +23,20 @@ const AllIteams = () => {
               </tr>
             </thead>
             {loadedData.map((data, idx) => (
-              <tr key={data._id}>
-                <th>{idx + 1}</th>
-                <td>{data.item_name}</td>
-                <td>{data.subcategory_Name}</td>
-                <td>{data.status}</td>
-                <td>{data.price}</td>
-                <button className=" mt-2 text-white rounded-lg hover:bg-stone-200 hover:text-black font-medium px-3 py-1 bg-[#B81D33]">View deatils</button>
-              </tr>
+              <tbody key={data._id}>
+                <tr className="text-lg font-normal">
+                  <th>{idx + 1}</th>
+                  <td>{data.item_name}</td>
+                  <td>{data.subcategory_Name}</td>
+                  <td>{data.status}</td>
+                  <td>{data.price}</td>
+                  <Link to={`/viewdeatils/${data._id}`}>
+                    <button className=" mt-2 text-white rounded-lg hover:bg-stone-200 hover:text-black font-medium px-3 py-1 bg-[#B81D33]">
+                      View deatils
+                    </button>
+                  </Link>
+                </tr>
+              </tbody>
             ))}
           </table>
         </div>

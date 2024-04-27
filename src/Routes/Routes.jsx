@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import MyCraftList from "../Pages/MyCraftList";
 import PrivateRoute from "./PrivateRoute";
 import AllIteams from "../Pages/AllIteams";
+import ViewDeatils from "../Pages/ViewDeatils";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,15 @@ const router = createBrowserRouter([
             <MyCraftList />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/viewdeatils/:id",
+        element: (
+          <PrivateRoute>
+            <ViewDeatils />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("http://localhost:5000/artcraft"),
       },
       {
         path: "/alliteams",
