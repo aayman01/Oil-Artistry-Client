@@ -8,11 +8,13 @@ import MyCraftList from "../Pages/MyCraftList";
 import PrivateRoute from "./PrivateRoute";
 import AllIteams from "../Pages/AllIteams";
 import ViewDeatils from "../Pages/ViewDeatils";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
