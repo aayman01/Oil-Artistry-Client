@@ -27,11 +27,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/mycraftlist",
-        element: <PrivateRoute><MyCraftList /></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <MyCraftList />
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/alliteams',
-        element : <AllIteams/>
+        path: "/alliteams",
+        element: <AllIteams />,
+        loader: () => fetch("http://localhost:5000/artcraft"),
       },
       {
         path: "/login",
