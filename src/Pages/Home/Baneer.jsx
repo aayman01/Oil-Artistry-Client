@@ -7,7 +7,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 const Baneer = () => {
   return (
-    <div>
+    <div className="mt-5 mb-8">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -29,8 +29,8 @@ const Baneer = () => {
               <div className="flex h-full items-center justify-center">
                 <div className="text-white">
                   <h2 className="mb-4 text-4xl p-4 font-semibold">
-                    Explore a diverse range of residential properties to <br />
-                    find the perfect place to call home
+                    Discover the beauty of art on our painting website! Explore
+                    a diverse collection of original paintings in various styles
                   </h2>
                 </div>
               </div>
@@ -43,9 +43,8 @@ const Baneer = () => {
               <div className="flex h-full items-center justify-center">
                 <div className="text-white">
                   <h2 className="mb-4 text-4xl px-5 font-semibold">
-                    Experience luxury living, urban charm, and countryside{" "}
-                    <br />
-                    serenity with our curated selection of properties
+                    Discover Art You Love <br />
+                    Browse Collection Updated Daily
                   </h2>
                 </div>
               </div>
@@ -58,8 +57,8 @@ const Baneer = () => {
               <div className="flex h-full items-center justify-center">
                 <div className="text-white">
                   <h2 className="mb-4 text-4xl p-4 font-semibold">
-                    Start your journey towards homeownership with our <br />
-                    comprehensive listings and expert guidance
+                    Elevate your space with vibrant colors and captivating <br />
+                    designs. Start your artistic journey today!
                   </h2>
                 </div>
               </div>
