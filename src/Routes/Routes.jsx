@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import MyCraftList from "../Pages/MyCraftList";
 import PrivateRoute from "./PrivateRoute";
+import AllIteams from "../Pages/AllIteams";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/mycraftlist",
-        element: (
-          <PrivateRoute>
-            <MyCraftList />
-          </PrivateRoute>
-        ),
+        element: <PrivateRoute><MyCraftList /></PrivateRoute>,
+      },
+      {
+        path: '/alliteams',
+        element : <AllIteams/>
       },
       {
         path: "/login",

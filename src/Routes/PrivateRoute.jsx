@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { NavLink, useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
 import PropTypes from "prop-types";
 
@@ -10,17 +10,16 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
     
     if (loading) {
-        <div className="flex items-center justify-center min-h-screen">
-          <ScaleLoader color="#B81D33" height={50} />
-        </div>;
+      return <div className="flex min-h-screen justify-center items-center">
+        <ScaleLoader color="#B81D33" height={50} />
+      </div>;
     }
 
     if (user) {
         return children;
     }
     
-    
-    return <NavLink state={location.pathname} to="/login"></NavLink>
+    return <Navigate state={location.pathname} to="/login"></Navigate>
 };
 
 PrivateRoute.propTypes = {
