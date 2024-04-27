@@ -17,7 +17,6 @@ const AllIteams = () => {
               <tr className="text-lg font-normal">
                 <th></th>
                 <th>Item name</th>
-                <th>Subcategory</th>
                 <th>Status</th>
                 <th>Price</th>
               </tr>
@@ -27,7 +26,6 @@ const AllIteams = () => {
                 <tr className="text-lg font-normal">
                   <th>{idx + 1}</th>
                   <td>{data.item_name}</td>
-                  <td>{data.subcategory_Name}</td>
                   <td>{data.status}</td>
                   <td>{data.price}</td>
                   <Link to={`/viewdeatils/${data._id}`}>

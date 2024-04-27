@@ -1,8 +1,9 @@
+import Baneer from "./Baneer";
 
 const Home = () => {
     return (
         <div className="max-w-6xl mx-auto">
-            <h2>Home page</h2>
+            <Baneer/>
         </div>
     );
 };
