@@ -6,7 +6,7 @@ const AddCraftIteam = () => {
     const {user} = useContext(AuthContext);
     const handleAdd = e => {
       e.preventDefault();
-      // const userName = 
+      
       const form =  e.target;
       const status = form.stockStatus.value;
       const item_name = form.item_name.value;

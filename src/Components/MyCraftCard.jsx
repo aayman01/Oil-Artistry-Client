@@ -99,7 +99,7 @@ const MyCraftCard = ({ item, items, setItems }) => {
         </p>
 
         <div className="card-actions justify-end">
-          <Link>
+          <Link to={`/updatedeatils/${_id}`}>
             <button className="btn bg-[#B81D33] text-white hover:text-[#B81D33] hover:bg-white font-semibold mt-2">
               Update
             </button>
@@ -117,6 +117,8 @@ const MyCraftCard = ({ item, items, setItems }) => {
 
 MyCraftCard.propTypes = {
   item: PropTypes.object.isRequired,
+  items: PropTypes.object.isRequired,
+  setItems: PropTypes.object.isRequired,
 };
 
 export default MyCraftCard;

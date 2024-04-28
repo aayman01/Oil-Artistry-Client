@@ -9,12 +9,13 @@ import PrivateRoute from "./PrivateRoute";
 import AllIteams from "../Pages/AllIteams";
 import ViewDeatils from "../Pages/ViewDeatils";
 import ErrorPage from "../Pages/ErrorPage";
+import UpdateDeatils from "../Components/UpdateDeatils";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -44,6 +45,16 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("http://localhost:5000/artcraft"),
+      },
+      {
+        path: "/updatedeatils/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateDeatils />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/artcraft/${params.id}`),
       },
       {
         path: "/alliteams",
