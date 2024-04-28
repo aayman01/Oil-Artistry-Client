@@ -146,7 +146,7 @@ const AddCraftIteam = () => {
                    <input
                      type="text"
                      name="processing_time"
-                     placeholder="Enter coffee Details"
+                     placeholder="Processing time in hour"
                      className="input input-bordered w-full"
                    />
                  </label>

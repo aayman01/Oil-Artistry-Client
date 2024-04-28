@@ -147,7 +147,7 @@ const UpdateDeatils = () => {
                     type="text"
                     name="processing_time"
                     defaultValue={loadedData[0].processing_time}
-                    placeholder="Enter coffee Details"
+                    placeholder="Processing time in hour"
                     className="input input-bordered w-full"
                   />
                 </label>
@@ -164,7 +164,7 @@ const UpdateDeatils = () => {
                   className="input input-bordered w-full"
                 />
               </label>
-              
+
               <div className="flex items-center justify-between mb-5">
                 <label className="w-1/2">
                   <div className="label">

@@ -13,7 +13,7 @@ const Baneer = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 3000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -57,7 +57,8 @@ const Baneer = () => {
               <div className="flex h-full items-center justify-center">
                 <div className="text-white">
                   <h2 className="mb-4 text-4xl p-4 font-semibold">
-                    Elevate your space with vibrant colors and captivating <br />
+                    Elevate your space with vibrant colors and captivating{" "}
+                    <br />
                     designs. Start your artistic journey today!
                   </h2>
                 </div>
