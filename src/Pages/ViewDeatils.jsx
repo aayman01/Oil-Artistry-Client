@@ -29,6 +29,9 @@ const ViewDeatils = () => {
             <span className="text-xl font-semibold">Processing time:</span>{" "}
             {data[0].processing_time}
           </p>
+          <button className="w-full btn bg-[#B81D33] text-white font-semibold mt-2">
+            Buy Now
+          </button>
         </div>
       </div>
     );

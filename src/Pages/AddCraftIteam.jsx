@@ -49,10 +49,11 @@ const AddCraftIteam = () => {
               text: "Added Successfully",
               icon: "success",
             });
-            e.reset();
+            
           }
         });
       // console.log(addIteam) 
+      e.reset();
     }
      return (
        <div className="max-w-6xl mx-auto p-4">
@@ -72,6 +73,7 @@ const AddCraftIteam = () => {
                      name="item_name"
                      placeholder="Item name"
                      className="input input-bordered w-full "
+                     required
                    />
                  </label>
                  <label className="form-control md:w-1/2">
@@ -83,6 +85,7 @@ const AddCraftIteam = () => {
                    <select
                      className="input input-bordered w-full"
                      name="subcategory_Name"
+                     required
                    >
                      <option value="Landscape Painting">
                        Landscape Painting
@@ -109,6 +112,7 @@ const AddCraftIteam = () => {
                      name="short_description"
                      placeholder="Short Description"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                  <label className="form-control md:w-1/2">
@@ -120,6 +124,7 @@ const AddCraftIteam = () => {
                      name="price"
                      placeholder="Price"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                </div>
@@ -135,6 +140,7 @@ const AddCraftIteam = () => {
                      name="rating"
                      placeholder="Rating"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                  <label className="form-control md:w-1/2">
@@ -148,6 +154,7 @@ const AddCraftIteam = () => {
                      name="processing_time"
                      placeholder="Processing time in hour"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                </div>
@@ -160,6 +167,7 @@ const AddCraftIteam = () => {
                    name="photoUrl"
                    placeholder="Photo URL"
                    className="input input-bordered w-full"
+                   required
                  />
                </label>
                <div className="md:flex items-center gap-4">
@@ -173,6 +181,7 @@ const AddCraftIteam = () => {
                      defaultValue={user?.email}
                      placeholder="Enter coffee Category"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                  <label className="form-control md:w-1/2">
@@ -185,6 +194,7 @@ const AddCraftIteam = () => {
                      defaultValue={user?.displayName}
                      placeholder="Enter coffee Details"
                      className="input input-bordered w-full"
+                     required
                    />
                  </label>
                </div>
@@ -196,6 +206,7 @@ const AddCraftIteam = () => {
                    <select
                      className="input input-bordered w-full"
                      name="stockStatus"
+                     required
                    >
                      <option value="In stock">In stock</option>
                      <option value="Made to oder">Made to oder</option>
@@ -210,6 +221,7 @@ const AddCraftIteam = () => {
                    <select
                      className="input input-bordered w-full"
                      name="customization"
+                     required
                    >
                      <option value="Yes">Yes</option>
                      <option value="No">No</option>
