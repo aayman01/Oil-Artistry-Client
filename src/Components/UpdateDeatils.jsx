@@ -1,8 +1,53 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateDeatils = () => {
     const loadedData = useLoaderData();
     
+    const handleUpdate = e => {
+        e.preventDefault();
+        const form = e.target;
+        const status = form.stockStatus.value;
+        const item_name = form.item_name.value;
+        const short_description = form.short_description.value;
+        const subcategory_Name = form.subcategory_Name.value;
+        const price = form.price.value;
+        const photoUrl = form.photoUrl.value;
+        const customization = form.customization.value;
+        const rating = form.rating.value;
+        const processing_time = form.processing_time.value;
+
+        const updateItem = {
+          item_name,
+          short_description,
+          subcategory_Name,
+          price,
+          photoUrl,
+          customization,
+          rating,
+          status,
+          processing_time,
+        }
+        // console.log(updateItem)
+        fetch(`http://localhost:5000/artcraft/${loadedData[0]._id}`,{
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(updateItem)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount>0){
+                Swal.fire({
+                  text: "Updated Succesfully",
+                  icon: "success",
+                });
+            }
+        })
+        
+    }
     
     return (
       <div className="max-w-6xl mx-auto p-4">
@@ -11,7 +56,7 @@ const UpdateDeatils = () => {
             Update Craft Iteam
           </h2>
           <div className="">
-            <form>
+            <form onSubmit={handleUpdate}>
               <div className="md:flex items-center gap-4">
                 <label className="form-control md:w-1/2">
                   <div className="label">
@@ -119,32 +164,7 @@ const UpdateDeatils = () => {
                   className="input input-bordered w-full"
                 />
               </label>
-              <div className="md:flex items-center gap-4">
-                <label className="form-control md:w-1/2">
-                  <div className="label">
-                    <span className="label-text font-bold">User Email</span>
-                  </div>
-                  <input
-                    type="email"
-                    name="user_email"
-                    defaultValue={loadedData[0].user_email}
-                    placeholder="Enter coffee Category"
-                    className="input input-bordered w-full"
-                  />
-                </label>
-                <label className="form-control md:w-1/2">
-                  <div className="label">
-                    <span className="label-text font-bold">User Name:</span>
-                  </div>
-                  <input
-                    type="text"
-                    name="user_name"
-                    defaultValue={loadedData[0].user_name}
-                    placeholder="Enter coffee Details"
-                    className="input input-bordered w-full"
-                  />
-                </label>
-              </div>
+              
               <div className="flex items-center justify-between mb-5">
                 <label className="w-1/2">
                   <div className="label">

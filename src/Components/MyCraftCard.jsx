@@ -30,6 +30,7 @@ const MyCraftCard = ({ item, items, setItems }) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+      // console.log(result)
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/artcraft/${_id}`,{
             method: 'DELETE'
