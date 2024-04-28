@@ -2,9 +2,11 @@
 const Review = () => {
     return (
       <div className="mt-24 mb-24">
-        <h2 className="text-5xl text-center font-bold mb-10">Cusmoter Reviews</h2>
+        <h2 className="text-5xl text-center font-bold mb-10">
+          Cusmoter Reviews
+        </h2>
         <div className="md:flex gap-3">
-          <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:divide-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+          <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y bg-[#B81D33] rounded-md text-white">
             <div className="flex justify-between p-4">
               <div className="flex space-x-4">
                 <div>
@@ -16,12 +18,10 @@ const Review = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">Leroy Jenkins</h4>
-                  <span className="text-xs text-gray-400 dark:text-gray-600">
-                    2 days ago
-                  </span>
+                  <span className="text-xs">2 days ago</span>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 text-yellow-500 dark:text-yellow-700">
+              <div className="flex items-center space-x-2 text-yellow-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -32,7 +32,7 @@ const Review = () => {
                 <span className="text-xl font-bold">4.5</span>
               </div>
             </div>
-            <div className="p-4 space-y-2 text-sm text-gray-400 dark:text-gray-600">
+            <div className="p-4 space-y-2 text-sm">
               <p>
                 The landscape painting I bought is stunning! It captures the
                 essence of nature so beautifully and brings a sense of calm to
@@ -41,7 +41,7 @@ const Review = () => {
               </p>
             </div>
           </div>
-          <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:divide-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+          <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y bg-[#B81D33] rounded-md text-white">
             <div className="flex justify-between p-4">
               <div className="flex space-x-4">
                 <div>
@@ -53,12 +53,12 @@ const Review = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">Emily S</h4>
-                  <span className="text-xs text-gray-400 dark:text-gray-600">
+                  <span className="text-xs ">
                     1 days ago
                   </span>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 text-yellow-500 dark:text-yellow-700">
+              <div className="flex items-center space-x-2 text-yellow-500 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -69,7 +69,7 @@ const Review = () => {
                 <span className="text-xl font-bold">4.0</span>
               </div>
             </div>
-            <div className="p-4 space-y-2 text-sm text-gray-400 dark:text-gray-600">
+            <div className="p-4 space-y-2 text-sm">
               <p>
                 The artwork I bought from your site is now the centerpiece of my
                 dining room. It is a conversation starter every time I have
