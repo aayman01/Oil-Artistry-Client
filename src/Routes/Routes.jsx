@@ -10,6 +10,7 @@ import AllIteams from "../Pages/AllIteams";
 import ViewDeatils from "../Pages/ViewDeatils";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateDeatils from "../Components/UpdateDeatils";
+import Subcategory from "../Pages/Subcategory";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
         path: "/alliteams",
         element: <AllIteams />,
         loader: () => fetch("http://localhost:5000/artcraft"),
+      },
+      {
+        path: "/Painting/:name",
+        element : <Subcategory/>,
       },
       {
         path: "/login",

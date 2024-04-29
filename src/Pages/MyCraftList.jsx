@@ -65,7 +65,7 @@ const MyCraftList = () => {
             </li>
           </ul>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-5 mb-24">
           {items.map((item) => (
             <MyCraftCard
               key={item._id}

@@ -14,11 +14,12 @@ const AllIteams = () => {
           <table className="table">
             {/* head */}
             <thead>
-              <tr className="text-lg font-normal">
+              <tr className="text-lg text-white font-normal bg-[#B81D33]">
                 <th></th>
                 <th>Item name</th>
                 <th>Status</th>
                 <th>Price</th>
+                <th></th>
               </tr>
             </thead>
             {loadedData.map((data, idx) => (
@@ -29,7 +30,7 @@ const AllIteams = () => {
                   <td>{data.status}</td>
                   <td>{data.price}</td>
                   <Link to={`/viewdeatils/${data._id}`}>
-                    <button className=" mt-2 text-white rounded-lg hover:bg-stone-200 hover:text-black font-medium px-3 py-1 bg-[#B81D33]">
+                    <button className=" mt-2 text-white rounded-lg hover:bg-stone-200 hover:text-black font-medium px-2 md:px-3 py-1 bg-[#B81D33]">
                       View deatils
                     </button>
                   </Link>

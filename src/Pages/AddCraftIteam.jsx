@@ -83,7 +83,7 @@ const AddCraftIteam = () => {
                      </span>
                    </div>
                    <select
-                     className="input input-bordered w-full"
+                     className="px-4 py-3 rounded-md border w-full"
                      name="subcategory_Name"
                      required
                    >
@@ -204,7 +204,7 @@ const AddCraftIteam = () => {
                      <span className="label-text font-bold">StockStatus:</span>
                    </div>
                    <select
-                     className="input input-bordered w-full"
+                     className="px-4 py-3 rounded-md border w-full"
                      name="stockStatus"
                      required
                    >
@@ -219,7 +219,7 @@ const AddCraftIteam = () => {
                      </span>
                    </div>
                    <select
-                     className="input input-bordered w-full"
+                     className="px-4 py-3 rounded-md border w-full"
                      name="customization"
                      required
                    >
