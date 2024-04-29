@@ -12,7 +12,7 @@ const ArtsAndCraftCategoriesCard = ({category}) => {
           <p className="text-center text-[#B81D33] mb-2 font-bold underline decoration-[#B81D33] text-xl ">
             {subcategory_Name}
           </p>
-          <p className="text-black">{short_description.slice(0, 250)}...</p>
+          <p className="text-black text-pretty">{short_description.slice(0, 220)}...</p>
         </div>
       </Link>
     );
