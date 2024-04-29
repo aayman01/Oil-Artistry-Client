@@ -10,7 +10,7 @@ import AllIteams from "../Pages/AllIteams";
 import ViewDeatils from "../Pages/ViewDeatils";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateDeatils from "../Components/UpdateDeatils";
-import Subcategory from "../Pages/Subcategory";
+import Subcategorys from "../Pages/Subcategorys";
 
 const router = createBrowserRouter([
   {
@@ -64,7 +64,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/Painting/:name",
-        element : <Subcategory/>,
+        element: <Subcategorys />,
+        loader: ({params}) => fetch(`http://localhost:5000/data/${params.name}`),
       },
       {
         path: "/login",

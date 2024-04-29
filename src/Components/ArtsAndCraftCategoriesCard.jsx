@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ArtsAndCraftCategoriesCard = ({category}) => {
     const { subcategory_Name, short_description, photoUrl } = category;
@@ -11,10 +12,12 @@ const ArtsAndCraftCategoriesCard = ({category}) => {
           <p className="text-center mb-2 font-bold underline decoration-black text-xl ">
             {subcategory_Name}
           </p>
-          <p className="text-black">{short_description}</p>
+          <p className="text-black">{short_description.slice(0,250)}...</p>
         </div>
       </Link>
     );
 };
-
+ArtsAndCraftCategoriesCard.propTypes = {
+    category : PropTypes.object.isRequired,
+}
 export default ArtsAndCraftCategoriesCard;
