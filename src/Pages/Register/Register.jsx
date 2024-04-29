@@ -57,11 +57,11 @@ const Register = () => {
       <h2 className="text-3xl font-bold mt-7 text-center my-7">
         Register your account
       </h2>
-      <div className=" lg:w-1/2 md:w-3/4 mx-auto shadow-2xl rounded-lg bg-image bg-cover bg-center mt-12 mb-20">
+      <div className=" lg:w-1/2 md:w-3/4 mx-auto shadow-2xl rounded-lg bg-[#fbe7ea] mt-12 mb-20">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="form-control">
             <label className="label">
-              <p className="label-text text-white text-lg font-medium">
+              <p className="label-text text-black text-lg font-medium">
                 Name <span className="text-red-600">*</span>{" "}
               </p>
             </label>
@@ -80,7 +80,7 @@ const Register = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <p className="label-text text-white text-lg font-medium">
+              <p className="label-text text-black text-lg font-medium">
                 E-mail <span className="text-red-600">*</span>{" "}
               </p>
             </label>
@@ -99,7 +99,7 @@ const Register = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <p className="label-text text-white text-lg font-medium">
+              <p className="label-text text-black text-lg font-medium">
                 PhotoURL <span className="text-red-600">*</span>{" "}
               </p>
             </label>
@@ -118,7 +118,7 @@ const Register = () => {
           </div>
           <div className="form-control relative">
             <label className="label">
-              <p className="label-text text-white text-lg font-medium">
+              <p className="label-text text-black text-lg font-medium">
                 Password <span className="text-red-600 font-medium">*</span>{" "}
               </p>
             </label>
@@ -153,10 +153,10 @@ const Register = () => {
               Register
             </button>
           </div>
-          <p className="text-center text-white mt-4 p-5 font-medium">
+          <p className="text-center text-black mt-4 p-5 font-medium">
             Already have an account?
             <Link
-              className="text-white font-medium underline decoration-[#B81D33]"
+              className="text-[#B81D33] font-medium underline decoration-[#B81D33]"
               to="/login"
             >
               {" "}
