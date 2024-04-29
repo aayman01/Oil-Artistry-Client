@@ -24,7 +24,7 @@ const AllIteams = () => {
             </thead>
             {loadedData.map((data, idx) => (
               <tbody key={data._id}>
-                <tr className="text-lg font-normal">
+                <tr className="text-lg font-normal bg-[#fbe7ea]">
                   <th>{idx + 1}</th>
                   <td>{data.item_name}</td>
                   <td>{data.status}</td>

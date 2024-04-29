@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             <ViewDeatils />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/artcraft"),
+        loader: () => fetch("https://oil-artistry-server.vercel.app/artcraft"),
       },
       {
         path: "/updatedeatils/:id",
@@ -55,17 +55,18 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/artcraft/${params.id}`),
+          fetch(`https://oil-artistry-server.vercel.app/artcraft/${params.id}`),
       },
       {
         path: "/alliteams",
         element: <AllIteams />,
-        loader: () => fetch("http://localhost:5000/artcraft"),
+        loader: () => fetch("https://oil-artistry-server.vercel.app/artcraft"),
       },
       {
         path: "/Painting/:name",
         element: <Subcategorys />,
-        loader: ({params}) => fetch(`http://localhost:5000/data/${params.name}`),
+        loader: ({ params }) =>
+          fetch(`https://oil-artistry-server.vercel.app/data/${params.name}`),
       },
       {
         path: "/login",

@@ -4,7 +4,7 @@ import artist3 from "../../assets/artist3.jpg"
 const Artist = () => {
     return (
       <div>
-        <h2 className="text-center font-bold text-4xl mb-8">Our Artists</h2>
+        <h2 className="text-center font-bold text-4xl mb-12">Our Artists</h2>
         <div className="flex -col md:flex gap-2 justify-evenly">
           <div className="">
             <img className="w-[200px] h-[300px]" src={artist1} alt="" />

@@ -9,10 +9,10 @@ const ArtsAndCraftCategoriesCard = ({category}) => {
           <div className=" flex items-center justify-center">
             <img className="w-20 h-24" src={photoUrl} alt="" />
           </div>
-          <p className="text-center mb-2 font-bold underline decoration-black text-xl ">
+          <p className="text-center text-[#B81D33] mb-2 font-bold underline decoration-[#B81D33] text-xl ">
             {subcategory_Name}
           </p>
-          <p className="text-black">{short_description.slice(0,250)}...</p>
+          <p className="text-black">{short_description.slice(0, 250)}...</p>
         </div>
       </Link>
     );

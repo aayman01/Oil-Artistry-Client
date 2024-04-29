@@ -8,11 +8,12 @@ const Home = () => {
     return (
       <div>
         <Baneer />
+        <CraftIteams />
+
         <div className="max-w-6xl mx-auto px-4">
-            <CraftIteams/>
-            <ArtsAndCraftCategories/>
-            <Artist/>
-            <Review/>
+          <ArtsAndCraftCategories />
+          <Artist />
+          <Review />
         </div>
       </div>
     );

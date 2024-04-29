@@ -10,29 +10,29 @@ const MyCraftList = () => {
     
     const handleSortYes = filter => {
       console.log(filter);
-      fetch(`http://localhost:5000/craft/${filter}`)
-      .then(res => res.json())
-      .then(data => {
-        setItems(data)
-      })
+      fetch(`https://oil-artistry-server.vercel.app/craft/${filter}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setItems(data);
+        });
     }
     const handleSortNo = filter => {
       console.log(filter);
-      fetch(`http://localhost:5000/craft/${filter}`)
-      .then(res => res.json())
-      .then(data => {
-        setItems(data)
-      })
+      fetch(`https://oil-artistry-server.vercel.app/craft/${filter}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setItems(data);
+        });
     }
     
     useEffect(()=>{
       
-        fetch(`http://localhost:5000/mycraft/${user?.email}`)
+        fetch(`https://oil-artistry-server.vercel.app/mycraft/${user?.email}`)
           .then((res) => res.json())
           .then((data) => {
             setItems(data);
-            if(data.length === 0){
-                setEmpty("You haven't Added any iteam yet")
+            if (data.length === 0) {
+              setEmpty("You haven't Added any iteam yet");
             }
           });
     },[user])

@@ -5,7 +5,7 @@ const ArtsAndCraftCategories = () => {
   const [subCategory, setSubcategory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/subcategory")
+    fetch("https://oil-artistry-server.vercel.app/subcategory")
       .then((res) => res.json())
       .then((data) => {
         setSubcategory(data);

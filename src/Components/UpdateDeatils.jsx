@@ -29,23 +29,26 @@ const UpdateDeatils = () => {
           processing_time,
         }
         // console.log(updateItem)
-        fetch(`http://localhost:5000/artcraft/${loadedData[0]._id}`,{
-            method: 'PUT',
+        fetch(
+          `https://oil-artistry-server.vercel.app/artcraft/${loadedData[0]._id}`,
+          {
+            method: "PUT",
             headers: {
-                'content-type' : 'application/json'
+              "content-type": "application/json",
             },
-            body: JSON.stringify(updateItem)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.modifiedCount>0){
-                Swal.fire({
-                  text: "Updated Succesfully",
-                  icon: "success",
-                });
+            body: JSON.stringify(updateItem),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.modifiedCount > 0) {
+              Swal.fire({
+                text: "Updated Succesfully",
+                icon: "success",
+              });
             }
-        })
+          });
         
     }
     

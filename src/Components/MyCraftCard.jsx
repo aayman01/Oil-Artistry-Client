@@ -32,8 +32,8 @@ const MyCraftCard = ({ item, items, setItems }) => {
     }).then((result) => {
       // console.log(result)
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/artcraft/${_id}`,{
-            method: 'DELETE'
+        fetch(`https://oil-artistry-server.vercel.app/artcraft/${_id}`, {
+          method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
@@ -44,10 +44,10 @@ const MyCraftCard = ({ item, items, setItems }) => {
                 text: "Your file has been deleted.",
                 icon: "success",
               });
-              const reamaining = items.filter(dt => dt._id !== _id)
-              setItems(reamaining)
+              const reamaining = items.filter((dt) => dt._id !== _id);
+              setItems(reamaining);
             }
-          })
+          });
       }
     });
   };

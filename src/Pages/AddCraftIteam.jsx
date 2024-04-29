@@ -33,7 +33,7 @@ const AddCraftIteam = () => {
         status,
         processing_time,
       };
-      fetch("http://localhost:5000/artcraft", {
+      fetch("https://oil-artistry-server.vercel.app/artcraft", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -42,14 +42,13 @@ const AddCraftIteam = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
+          console.log(data);
           if (data.insertedId) {
             Swal.fire({
               title: "Success!",
               text: "Added Successfully",
               icon: "success",
             });
-            
           }
         });
       // console.log(addIteam) 
@@ -57,7 +56,7 @@ const AddCraftIteam = () => {
     }
      return (
        <div className="max-w-6xl mx-auto p-4">
-         <div className="bg-[#F4F3F0] p-20 rounded-lg">
+         <div className="bg-[#fbe7ea] p-20 rounded-lg mt-10 mb-14">
            <h2 className="text-3xl text-center mb-7 font-bold">
              Add Craft Iteam
            </h2>
