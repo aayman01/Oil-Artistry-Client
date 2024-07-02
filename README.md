@@ -7,6 +7,11 @@ WatercolorWhisper is a premier platform for buying and selling watercolour paint
 ## Category
 - Painting and Drawing
 
+## Clone my project
+- download on your computer first
+- Install Dependencies: npm i
+- Deploy it on the local server: npm run dev
+
 ## Features
 
 -  Easily navigate through different categories to find the art that resonates with you the most.
